@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <meta name="description" content="Página de contacto para enviar mensajes y consultas." />
+  <link rel="stylesheet" href="/assets/styles/styles.css">
+</head>
+
+<body>
+  <main>
+    <section >
+      <header>
+        <h1>Contáctanos</h1>
+        <p>Envianos tu mensaje y te responderemos pronto</p>
+      </header>
+      
+      <form id="contactForm" action="#" method="post">
+          
+        <div class="form-group">
+          <label for="nombre">Nombre *</label>
+          <input type="text" 
+                 id="nombre"
+                 name="nombre" 
+                 required minlength="2"
+                 pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+"
+                 aria-describedby="nombre-help" />
+          <small id="nombre-help">Mínimo 2 caracteres, solo letras</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Correo Electrónico *</label>
+          <input type="email"
+                 id="email"
+                 name="email" 
+                 required 
+                 aria-describedby="email-help" />
+          <small id="email-help">Ingresa un correo válido</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" 
+                    name="mensaje"
+                    required minlength="10"
+                    rows="4"
+                    placeholder="Escribe tu mensaje aquí..."
+                    aria-describedby="mensaje-help"></textarea>
+          <small id="mensaje-help">Mínimo 10 caracteres</small>
+        </div>
+        
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+  <script src="/assets/js/app.js"></script>
+</body>
+
+</html>
